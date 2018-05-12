@@ -311,7 +311,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 90850913}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 946265730}
@@ -319,7 +319,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 200}
   m_SizeDelta: {x: 800, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &90850915
@@ -2130,7 +2130,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 500}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1000, y: 1000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &990070255
@@ -2978,22 +2978,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04b4fecf674d77048b60d630a063893a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  z: {fileID: 1257083434}
-  c: {fileID: 946265727}
-  Tb: {fileID: 90850913}
-  ss:
-  - Zander is the little blue thing. T to move it forward. G to move it backward.
-    F to turn it left. H to turn it right.
-  - The arrow on Zander shows his direction. The screen next to you is a Zander screen
-    it shows you what Zander sees.
-  - The tall black structure behind you is a neron. Bump it to activate it. You need
-    to activate five to beat a level.
-  - The white square behind you is a button. Walk in it to activate it. It moves something
-    when you activate it.
-  - The white square behind you is a lever. Walk in it to activate it. It moves something
-    when you activate it. Then if you bump it after it moved the thing, it will move
-    the thing back.
-  - 'Press exit to go to the menu. Note: if you do you lose all your progress.'
+  Zander: {fileID: 1257083434}
+  Canvas: {fileID: 946265727}
+  Text: {fileID: 90850913}
+  TextString:
+  - 'To move the little blue thing: T to move forward, G to move backward, F to rotate
+    left, H to rotate right.'
+  - The thing to the right of you is a screen that lets you see what the little blue
+    thing sees.
+  - The thing behind you is a neuron touch it to activate it you need to activate
+    five to beat a level.
+  - The thing in behind of you is a button press it to activate it when it is activated
+    it moves something.
+  - The thing behind you is a level it is like a button but you can press it again
+    to move the object back.
+  - Press esc to go to the menu but you lose all your progress.
 --- !u!1 &1472086763
 GameObject:
   m_ObjectHideFlags: 0
