@@ -3,71 +3,65 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class LeverScript : MonoBehaviour {
-	public Transform T;
+	public Transform T;//Target Transform
 	public float movey;
 	public float movex;
 	public float movez;
-	int O;
-	int idf;
-	int idb;
-	float Ti;
-	public float Tis;
-	Vector3 D;
-	bool Di = false;
+	int IsItUp;
+	int IsDoneMovingUp;
+	int IsDoneMovingDown;
+	float CountDownTime;
+	public float Tis;//Time it takes to move
+	Vector3 DirectionToMove;
+	bool DidTheRecalculations = false;
 	public Mesh Lever1;
 	public Mesh Lever2;
 
 	void start () {
-		O = 0;
+		IsItUp = 0;
 	}
 
 	void Update () {
-		if (Di == false) {
+		if (DidTheRecalculations == false) {
+			//Makes it so that it doesn't movey/x/z each second, instead it makes it move movey/x/z over the time you want
 			movey = movey / Tis;
 			movex = movex / Tis;
 			movez = movez / Tis;
-			Di = true;
+			DidTheRecalculations = true;
 		}
-		if (idb == 0 && Ti > 0) {
+		if (IsDoneMovingDown == 0 && CountDownTime > 0) {
+			//Moves it toward the place you want and counts down the time it has passed from when it started moving
 			GetComponent<MeshFilter> ().mesh = Lever2;
-			D.Set (movex * Time.deltaTime, movey * Time.deltaTime, movez * Time.deltaTime);
-			print (D);
-			print (T.position);
-			Ti = Ti - Time.deltaTime;
-			T.position += D;
-			print (T.position);
+			DirectionToMove.Set (movex * Time.deltaTime, movey * Time.deltaTime, movez * Time.deltaTime);
+			CountDownTime = CountDownTime - Time.deltaTime;
+			T.position += DirectionToMove;
 		}
-		if (Ti <= 0) {
-			idf = 0;
+		if (CountDownTime <= 0) {
+			IsDoneMovingUp = 0;
 		}
-		if (idf == 0 && Ti > 0) {
+		if (IsDoneMovingUp == 0 && CountDownTime > 0) {
+			//Moves it away the place you want and counts down the time it has passed from when it started moving
 			GetComponent<MeshFilter> ().mesh = Lever1;
-			D.Set (movex * Time.deltaTime, movey * Time.deltaTime, movez * Time.deltaTime);
-			print (D);
-			print (T.position);
-			Ti = Ti - Time.deltaTime;
-			T.position -= D;
-			print (T.position);
+			DirectionToMove.Set (movex * Time.deltaTime, movey * Time.deltaTime, movez * Time.deltaTime);
+			CountDownTime = CountDownTime - Time.deltaTime;
+			T.position -= DirectionToMove;
 		}
-		if (Ti <= 0) {
-			idb = 0;
+		if (CountDownTime <= 0) {
+			IsDoneMovingDown = 0;
 		}
 	}
 
 	void OnTriggerEnter () {
-		if (O == 0 && idb == 0) {
-			idf = 1;
-			print (Ti);
-			O = 1;
-			Ti = Tis;
-			print (Ti);
+		//Makes it move when you bump it
+		if (IsItUp == 0 && IsDoneMovingDown == 0) {
+			IsDoneMovingUp = 1;
+			IsItUp = 1;
+			CountDownTime = Tis;
 		}
-		if (O == 1 && idf == 0) {
-			print (Ti);
-			idb = 1;
-			O = 0;
-			Ti = Tis;
-			print (Ti);
+		if (IsItUp == 1 && IsDoneMovingUp == 0) {
+			IsDoneMovingDown = 1;
+			IsItUp = 0;
+			CountDownTime = Tis;
 		}
 	}
 }

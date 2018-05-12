@@ -23,7 +23,6 @@ public class tMOVE : MonoBehaviour {
 		if (Input.GetKeyDown ("space")) {
 			//When the spacebar is down goes to the next tutorial
 			TutorialLevel++;
-			print (TextString [TutorialLevel - 1]);
 			TextWriting.SetText (TextString[TutorialLevel - 1]);
 			TutorialLevel = Mathf.Clamp (TutorialLevel, 0, 5);
 			transform.position = new Vector3 (0 + TutorialLevel * 15, 0, 0);

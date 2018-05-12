@@ -10,21 +10,23 @@ public class Textscore : MonoBehaviour {
 	public int Score;
 	public int Level;
 	int Hasrest;
-	public Vector3[] LS;
-	public GameObject g;
-	public GameObject g1;
-	public Camera CM;
-	public GameObject CL;
-	public Camera CMZ;
+	public Vector3[] LS;//Level Start Locations
+	public GameObject g;//Player
+	public GameObject g1;//Zander
+	public Camera CM;//Player camera camera component
+	public GameObject CL;//Player camera
+	public Camera CMZ;//The reward camera
 
 	// Use this for initialization
 	void Start () {
+		//Set up
 		Score = 0;
 		text.text = "Score:" + Score;
 	}
 
 	// Update is called once per frame
 	void Update () {
+		//Keeps the game going
 		text.text = "Score:" + Score;
 		if (Score == 5) {
 			if(Hasrest == 0){
@@ -33,10 +35,12 @@ public class Textscore : MonoBehaviour {
 			}
 		}
 		if (Input.GetKeyDown ("z") && Input.GetKey ("m") && Input.GetKey ("p")) {
+			//Cheat code
 			StartCoroutine (reset ());
 		}
 	}
 	IEnumerator reset (){
+		//Goes to next and sometimes plays an animation
 		Level++;
 		CM.enabled = false;
 		CMZ.enabled = false;
