@@ -58245,7 +58245,7 @@ Prefab:
     - target: {fileID: 114339327467750018, guid: c785cb2134fdb6347887a422a7f3cf3c,
         type: 2}
       propertyPath: movez
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114339327467750018, guid: c785cb2134fdb6347887a422a7f3cf3c,
         type: 2}
@@ -58255,13 +58255,18 @@ Prefab:
     - target: {fileID: 114339327467750018, guid: c785cb2134fdb6347887a422a7f3cf3c,
         type: 2}
       propertyPath: TimeMovingTakes
-      value: 1
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 114339327467750018, guid: c785cb2134fdb6347887a422a7f3cf3c,
         type: 2}
       propertyPath: TargetTransform
       value: 
       objectReference: {fileID: 97581881}
+    - target: {fileID: 114339327467750018, guid: c785cb2134fdb6347887a422a7f3cf3c,
+        type: 2}
+      propertyPath: movey
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c785cb2134fdb6347887a422a7f3cf3c, type: 2}
   m_IsPrefabParent: 0
@@ -61506,11 +61511,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4399207770594852, guid: 3ac1544975238b5459acc245b38bcbbc, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 35
+      value: 33
       objectReference: {fileID: 0}
     - target: {fileID: 4399207770594852, guid: 3ac1544975238b5459acc245b38bcbbc, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -26.951
+      value: -27.958
       objectReference: {fileID: 0}
     - target: {fileID: 4399207770594852, guid: 3ac1544975238b5459acc245b38bcbbc, type: 2}
       propertyPath: m_LocalRotation.x

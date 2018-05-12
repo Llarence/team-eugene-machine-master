@@ -28,7 +28,7 @@ public class tMOVE : MonoBehaviour {
 			transform.position = new Vector3 (0 + TutorialLevel * 15, 0, 0);
 			Zander.transform.position = new Vector3 (TutorialLevel * 15, 2.5f, 0);
 			Canvas.transform.position = new Vector3 (TutorialLevel * 15, 500, 500);
-			Text.transform.position = new Vector3 (TutorialLevel * 15, 500, 500);
+			Text.transform.position = new Vector3 (TutorialLevel * 15, 200, 600);
 		}
 	}
 }

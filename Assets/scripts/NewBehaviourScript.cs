@@ -5,6 +5,9 @@ using UnityEngine;
 public class NewBehaviourScript : MonoBehaviour {
 	Vector3 Move;
 	float pitch;
+	float H;
+	float V;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -13,8 +16,8 @@ public class NewBehaviourScript : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
 		//Moves the player
-		float H = Input.GetAxis ("Horizontal");
-		float V = Input.GetAxis ("Vertical");
+		H = Input.GetAxis ("Horizontal");
+		V = Input.GetAxis ("Vertical");
 		Move = new Vector3 (H, 0f, V);
 		transform.Translate (Move * 6 * Time.deltaTime);
 	}
