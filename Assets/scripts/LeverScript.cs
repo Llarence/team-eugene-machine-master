@@ -14,6 +14,9 @@ public class LeverScript : MonoBehaviour {
 	public float Tis;
 	Vector3 D;
 	bool Di = false;
+	public Mesh Lever1;
+	public Mesh Lever2;
+
 	void start () {
 		O = 0;
 	}
@@ -26,6 +29,7 @@ public class LeverScript : MonoBehaviour {
 			Di = true;
 		}
 		if (idb == 0 && Ti > 0) {
+			GetComponent<MeshFilter> ().mesh = Lever2;
 			D.Set (movex * Time.deltaTime, movey * Time.deltaTime, movez * Time.deltaTime);
 			print (D);
 			print (T.position);
@@ -37,6 +41,7 @@ public class LeverScript : MonoBehaviour {
 			idf = 0;
 		}
 		if (idf == 0 && Ti > 0) {
+			GetComponent<MeshFilter> ().mesh = Lever1;
 			D.Set (movex * Time.deltaTime, movey * Time.deltaTime, movez * Time.deltaTime);
 			print (D);
 			print (T.position);

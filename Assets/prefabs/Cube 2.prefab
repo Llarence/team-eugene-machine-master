@@ -83,7 +83,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1677544553849272}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 4300000, guid: 9274a16c0f5bd0a45a41cf9ae3e61874, type: 3}
 --- !u!65 &65773855134824756
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -112,3 +112,5 @@ MonoBehaviour:
   movex: 0
   movez: 0
   Tis: 0
+  Lever1: {fileID: 4300000, guid: 9274a16c0f5bd0a45a41cf9ae3e61874, type: 3}
+  Lever2: {fileID: 4300000, guid: f13b9a0ba5f6558458def67a8cea5a71, type: 3}

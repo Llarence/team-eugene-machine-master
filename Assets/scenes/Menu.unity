@@ -983,9 +983,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10d6e4aa27d993b48824988c51d67d95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sP: 
-  V: {fileID: 617111526}
-  vC: {fileID: 32900000, guid: 7366fb2b967547a4f8d85c99224bae5e, type: 3}
+  SceneToLoad: 
+  VideoPlayer: {fileID: 617111526}
+  VideoClip: {fileID: 32900000, guid: 7366fb2b967547a4f8d85c99224bae5e, type: 3}
 --- !u!4 &1982300922
 Transform:
   m_ObjectHideFlags: 0

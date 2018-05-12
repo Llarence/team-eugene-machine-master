@@ -12,6 +12,8 @@ public class ButtonScript : MonoBehaviour {
 	public  float TimeMovingTakes;
 	Vector3 DirectionVector3;
 	bool HasSet = false;
+	public Mesh Lever2;
+
 	void start () {
 		HasGone = 0;
 	}
@@ -26,6 +28,7 @@ public class ButtonScript : MonoBehaviour {
 			HasSet = true;
 		}
 		if (HasGone == 1 && TimeCountDown > 0) {
+			GetComponent<MeshFilter> ().mesh = Lever2;
 			//Moves it and counts down the time it has passed from when it started moving
 			TimeCountDown = TimeCountDown - Time.deltaTime;
 			TargetTransform.position += DirectionVector3;
