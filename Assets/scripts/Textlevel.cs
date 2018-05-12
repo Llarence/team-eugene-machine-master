@@ -9,12 +9,14 @@ public class Textlevel : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		//Set up
 		Text = GameObject.Find ("Text");
 		script = Text.GetComponent<Textscore> ();
 	}
 
 	// Update is called once per frame
 	void Update () {
+		//Keeps the text updated
 		text.text = "Level:" + script.Level;
 		}
 }

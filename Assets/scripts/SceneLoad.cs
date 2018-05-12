@@ -6,22 +6,25 @@ using UnityEngine.Video;
 
 public class SceneLoad : MonoBehaviour {
 
-	public string sP;
-	public VideoPlayer V;
-	public VideoClip vC;
+	public string SceneToLoad;
+	public VideoPlayer VideoPlayer;
+	public VideoClip VideoClip;
 
 	// Use this for initialization
 	public void LoadScene (string s) {
-		sP = s;
-		StartCoroutine (w ());
+		//Goes to a new scene when called
+		SceneToLoad = s;
+		StartCoroutine (GoToNextScene ());
 	}
 	
 	// Update is called once per frame
-	IEnumerator w () {
-		if (sP == "example") {
-			V.clip = vC;
+	IEnumerator GoToNextScene () {
+		//Loads the next scene
+		if (SceneToLoad == "example") {
+			//Plays tree hitting animation
+			VideoPlayer.clip = VideoClip;
 			yield return new WaitForSeconds (13);
 		}
-		SceneManager.LoadScene (sP);
+		SceneManager.LoadScene (SceneToLoad);
 	}
 }

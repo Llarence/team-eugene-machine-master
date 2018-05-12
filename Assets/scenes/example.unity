@@ -5497,7 +5497,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1934014893
+  randomSeed: 1295771806
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -13334,11 +13334,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bd1fabbfdaf63140b7f2d5acafe8d3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  T: {fileID: 464378838}
+  TargetTransform: {fileID: 0}
   movey: -100
   movex: 0
   movez: 0
-  Tis: 1
+  TimeMovingTakes: 0
 --- !u!1 &263735950
 GameObject:
   m_ObjectHideFlags: 0
@@ -40818,7 +40818,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1279992772
+  randomSeed: -802298983
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -45010,7 +45010,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 325809420
+  randomSeed: -2006801325
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -61802,10 +61802,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72ab60bd365fa4244a0e924971d5ce94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  V1: {fileID: 32900000, guid: d8d94555a75d95248a07bbbdfd12b7d5, type: 3}
-  V2: {fileID: 32900000, guid: b221397dcb522ba4da8e12a3759d3580, type: 3}
-  V3: {fileID: 32900000, guid: 66a2607b7cc72da4ab988805b0bd3e8c, type: 3}
-  g: {fileID: 1485919586}
+  Video1: {fileID: 32900000, guid: d8d94555a75d95248a07bbbdfd12b7d5, type: 3}
+  Video2: {fileID: 32900000, guid: b221397dcb522ba4da8e12a3759d3580, type: 3}
+  Video3: {fileID: 32900000, guid: 66a2607b7cc72da4ab988805b0bd3e8c, type: 3}
+  Text: {fileID: 1485919586}
 --- !u!1 &1952235460 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1761585274479606, guid: 1a5025de7bf86414dbe7d0eca833c630,
@@ -63262,7 +63262,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 325809420
+  randomSeed: -327065881
   InitialModule:
     serializedVersion: 3
     enabled: 1

@@ -54,6 +54,7 @@ public class Textscore : MonoBehaviour {
 			yield return new WaitForSeconds (15);
 			CL.transform.eulerAngles = new Vector3 (0, 0, 0);
 			SceneManager.LoadScene ("Credits");
+			yield return new WaitForSeconds (15);
 		}
 		CM.enabled = true;
 		CMZ.enabled = true;

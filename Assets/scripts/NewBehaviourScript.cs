@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class NewBehaviourScript : MonoBehaviour {
-	float t;
-	float w;
 	Vector3 Move;
 	float pitch;
 	// Use this for initialization
@@ -14,6 +12,7 @@ public class NewBehaviourScript : MonoBehaviour {
 
 	// Update is called once per frame
 	void FixedUpdate () {
+		//Moves the player
 		float H = Input.GetAxis ("Horizontal");
 		float V = Input.GetAxis ("Vertical");
 		Move = new Vector3 (H, 0f, V);
@@ -21,6 +20,7 @@ public class NewBehaviourScript : MonoBehaviour {
 	}
 
 	void Update () {
+		//Rotates the player
 		pitch += Input.GetAxis ("Mouse X") * 2;
 		transform.eulerAngles = new Vector3 (0f, pitch, 0f);
 	}

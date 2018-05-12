@@ -205,7 +205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da9075d3231aa544992eef7932090e29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sf: {fileID: 8300000, guid: dc9a23dc6f3d0e942bcfc1d2aa60dc9e, type: 3}
+  SoundEffect: {fileID: 8300000, guid: dc9a23dc6f3d0e942bcfc1d2aa60dc9e, type: 3}
   bright: {fileID: 2100000, guid: 39605835305fe014d9f3fc0797be4838, type: 2}
   dark: {fileID: 2100000, guid: 39dd428766b3b2049ac39b027d9a048d, type: 2}
-  m: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  NeuronMesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}

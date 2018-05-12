@@ -4,17 +4,18 @@ using UnityEngine;
 
 public class change : MonoBehaviour {
 
-	public AudioClip sf;
+	public AudioClip SoundEffect;
 	public Material bright;
 	public Material dark;
 	GameObject Text;
 	Textscore script;
 	int HasActivated;
-	public Mesh m;
+	public Mesh NeuronMesh;
 
 	// Use this for initialization
 	void Start () {
-		GetComponent<AudioSource> ().clip = sf;
+		//Set up
+		GetComponent<AudioSource> ().clip = SoundEffect;
  		Text = GameObject.Find ("Text");
 		script = Text.GetComponent<Textscore> ();
 		HasActivated = 0;
@@ -22,14 +23,14 @@ public class change : MonoBehaviour {
 
 	// Update is called once per frame
 	void OnCollisionEnter (Collision col) {
+		//Edits the neuron when it is hit
 		if (col.gameObject.name == "Player") {
-			print (GetComponent<Renderer> ().material);
 			if (HasActivated == 0){
 				GetComponent<AudioSource> ().Play ();
-					script.Score++;
+				script.Score++;
 				GetComponent<Renderer> ().material = bright;
 				transform.localScale = new Vector3 (transform.localScale.x / 50, transform.localScale.y / 50, transform.localScale.z / 50);
-				GetComponent<MeshFilter> ().mesh = m;
+				GetComponent<MeshFilter> ().mesh = NeuronMesh;
 				GetComponent<BoxCollider> ().size = new Vector3 (1, 1, 1);
 			}
 			HasActivated = 1;

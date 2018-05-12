@@ -3,42 +3,40 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ButtonScript : MonoBehaviour {
-	public Transform T;
+	public Transform TargetTransform;
 	public float movey;
 	public float movex;
 	public float movez;
-	int O;
-	float Ti;
-	public  float Tis;
-	Vector3 D;
-	bool Di = false;
+	int HasGone;
+	float TimeCountDown;
+	public  float TimeMovingTakes;
+	Vector3 DirectionVector3;
+	bool HasSet = false;
 	void start () {
-		O = 0;
+		HasGone = 0;
 	}
 
 	void Update () {
-		if (Di == false) {
-			movey = movey / Tis;
-			movex = movex / Tis;
-			movez = movez / Tis;
-			Di = true;
+		if (HasSet == false) {
+			//Makes it so that it doesn't movey/x/z each second, instead it makes it move movey/x/z over the time you want
+			movey = movey / TimeMovingTakes;
+			movex = movex / TimeMovingTakes;
+			movez = movez / TimeMovingTakes;
+			DirectionVector3.Set(movex * Time.deltaTime, movey * Time.deltaTime, movez * Time.deltaTime);
+			HasSet = true;
 		}
-		if (O == 1 && Ti > 0) {
-			D.Set(movex * Time.deltaTime, movey * Time.deltaTime, movez * Time.deltaTime);
-			print (D);
-			print (T.position);
-			Ti = Ti - Time.deltaTime;
-			T.position += D;
-			print (T.position);
+		if (HasGone == 1 && TimeCountDown > 0) {
+			//Moves it and counts down the time it has passed from when it started moving
+			TimeCountDown = TimeCountDown - Time.deltaTime;
+			TargetTransform.position += DirectionVector3;
 		}
 	}
 
 	void OnTriggerStay () {
-		if (O == 0) {
-			print (Ti);
-			O = 1;
-			Ti = Tis;
-			print (Ti);
+		//Makes it move when you bump it
+		if (HasGone == 0) {
+			HasGone = 1;
+			TimeCountDown = TimeMovingTakes;
 		}
 	}
 }
